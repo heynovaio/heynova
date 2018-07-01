@@ -1,0 +1,22 @@
+.page {
+	padding-top: 175px;
+	p {
+		color: $brand-color-3;
+	}
+}
+.content {
+  header {
+    z-index: 3;
+  }
+}
+.page-header {
+  width: 50%;
+  h1 {
+    color: $brand-color-3;
+    padding-bottom: 14px;
+    margin-bottom: 40px;
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}

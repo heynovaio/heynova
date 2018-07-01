@@ -1,0 +1,134 @@
+.sign-up {
+  background: $brand-color-3;
+  padding: 30px 0px 40px;
+  position: relative;
+  z-index: 2;
+  form {
+	  max-width: 700px;
+	}
+	.wrapper {
+		position: relative;
+	}
+}
+.container-form {
+	z-index: 2;
+  position: relative;
+	h2 {
+    line-height: 1.2;
+    font-size: 44px;
+    margin: 50px 0 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    line-height: 2;
+    @include mq($until: tablet) {
+    	font-size: 36px;
+			line-height: 1.5;
+			margin-top: 20px;
+			margin-bottom: 15px;
+    }
+	}
+	p {
+		color: #fff;
+		font-weight: 300;
+		margin-bottom: 25px;
+	}
+	label {
+		display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    font-family: $base-font-family;
+    margin-bottom: 15px;
+    color: #fff;
+	}
+	textarea,
+	input[type="text"],
+	input[type="email"] {
+		width: 100%;
+		margin-bottom: 25px;
+		background: none;
+		border: none;
+		border-bottom: 2px solid #fff;
+		font-size: 18px;
+		font-weight: 300;
+		color: #fff;
+		line-height: 1.5;
+		height: 38px;
+		outline: none;
+		-webkit-appearance: none;
+		font-family: $base-font-family;
+		border-radius: 0;
+		&:focus {
+			border-bottom: 2px solid $brand-color;
+		}
+	}
+	textarea {
+		border: 2px solid #fff;
+		height: 200px;
+		padding: 15px;
+	}
+	input[type="submit"] {
+		font-family: $base-font-family;
+		outline: none;
+		-webkit-appearance: none;
+		background: $brand-color-4;
+		color: #fff;
+		border: none;
+		border-radius: 0;
+		font-size: 18px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: 14px 22px 16px;
+		margin-top: 12px;
+		&:focus {
+			border: 2px solid $brand-color;
+		}
+		@include mq($until: mini) {
+			background: $brand-color;
+		}
+		&:hover {
+			background: $brand-color;
+		}
+	}
+}
+.copyright {
+	text-align: center;
+	color: #fff;
+	width: 100%;
+	padding: 50px 0 0;
+	display: block;
+	opacity: .6;
+}
+footer {
+	.social-nav {
+		list-style: none;
+		position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    @include mq($until: tablet) {
+			position: relative;
+			text-align: center;
+			margin-top: 30px;
+			margin-left: 0;
+		}
+    i {
+    	margin-left: 15px;
+    	color: $brand-color;
+    }
+		a {
+			color: #fff;
+			font-size: 22px;
+		}
+		li {
+			margin-top: 12px;
+		}
+	}
+}
+.home {
+	footer .social-nav {
+		display: none;
+	}
+}

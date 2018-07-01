@@ -1,0 +1,368 @@
+.home {
+	.hey-nova {
+		display: none;
+	}
+}
+h1.page-heading {
+  font-weight: 700;
+  font-size: 124px;
+  color: $brand-color-4;
+  position: relative;
+  margin: 60px 0 30px;
+  text-align: center;
+  @include mq($from: tablet) {
+  	margin-right: -27px;
+  }
+  @include mq($until: wide) {
+  	font-size: 85px;
+  }
+  @include mq($until: desktop) {
+  	margin-top: 25px;
+  }
+  @include mq($until: mini) {
+  	font-size: 66px;
+  }
+  .io {
+  	position: relative;
+  	z-index: 1;
+  }
+  .nova {
+  	position:relative;
+  	z-index: 5;
+    color: $brand-color-3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  	background-image: url(images/main-bg.jpg);
+  	background-size: 38%;
+		&:after {
+	    position: absolute;
+	    content: '';
+		}
+  }
+}
+.top-tout {
+	background: $brand-color-3;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 40px;
+	background: #0b1c2e;
+	background: -moz-radial-gradient(center, ellipse cover, #0b1c2e 0%, rgba(10,34,57,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #0b1c2e), color-stop(100%, #06101b));
+	background: -webkit-radial-gradient(center, ellipse cover, #0b1c2e 0%, #06101b 100%);
+	background: -o-radial-gradient(center, ellipse cover, #0b1c2e 0%, #06101b 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #0b1c2e 0%, #06101b 100%);
+	background: radial-gradient(ellipse at center, #0b1c2e 0%, #06101b 100%);
+  @include mq($until: tablet) {
+		padding-top: 95px;
+  }
+  @include mq($from: tablet) {
+  	background-attachment: fixed;
+  	padding: $spacing-unit;
+ 		min-height: 780px;
+  }
+  .wrapper {
+  	position: relative;
+  	z-index: 2;
+  }
+  &:after {
+  	content: '';
+		position: fixed;
+    z-index: 0;
+    top: 30px;
+    bottom: 20px;
+    right: 25px;
+    margin-bottom: 20px;
+  	width: 50%;
+    background-color: $brand-color-2;
+    @extend .scale-up-left;
+    @include mq($until: desktop){
+    	position: absolute;
+    	bottom: auto;
+			height: 185px;
+	    top: 120px;
+	    right: 21px;
+    }
+	}
+}
+#ball {
+	width: 300px;
+	height: 300px;	border-radius: 150px;
+	background-color: blue;
+	background-image: radial-gradient(circle 400px at 0 0, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,.8)), radial-gradient(circle 180px at 90px 80px, rgba(255,255,255,.7), rgba(0,0,0,0));
+	background-repeat: no-repeat, no-repeat;
+
+	position:relative;
+	}
+#ball:after {
+	content: "";
+	z-index: -1;
+	top: 220px; left: 150px;
+	position: absolute;
+	background-color: black;
+	border-radius: 280px 60px;
+	width: 150px;
+	height: 80px;
+	box-shadow: 1px 0 1px black;
+	opacity: .8;
+	}
+.tagline {
+	font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 26px;
+  max-width: 600px;
+  letter-spacing: -.03em;
+  @include mq($until: wide) {
+  	font-size: 30px;
+  	margin-bottom: 16px;
+  }
+}
+.call-out {
+	font-size: 30px;
+	line-height: 40px;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  margin-bottom: 58px;
+  max-width: 636px;
+  @include mq($until: mini) {
+  	font-size: 24px;
+  	margin-bottom: 28px;
+  }
+}
+.email {
+	a {
+		color: #fff;
+		display: inline-block;
+		text-align: center;
+		font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0;
+		color: $brand-color-4;
+		padding: 14px 26px 16px;
+		text-transform: uppercase;
+		border: 5px solid $brand-color;
+		&:hover {
+			color: #fff;
+			background: $brand-color-4;
+			text-decoration: none;
+			border-color: $brand-color-4;
+		}
+	}
+}
+.what-we-do,
+.why-we-do,
+.who {
+	color: $brand-color-3;
+	z-index: 2;
+	position: relative;
+	h2 {
+		font-size: 44px;
+		margin: 50px 0 30px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $brand-color-3;
+		line-height: 2;
+		@include mq($until: tablet) {
+			font-size: 36px;
+			line-height: 1.5;
+			margin: 20px 0 30px;
+		}
+	}
+	h3 {
+		font-size: 32px;
+		margin: 30px 0 15px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $brand-color-4;
+	}
+}
+
+.what-we-do {
+	@include mq($from: tablet) {
+		padding-top: 500px;
+		margin-bottom: 80px;
+	}
+	h2 {
+		padding-top: 20px;
+	}
+	strong {
+		color: $brand-color;
+		font-size: 30px;
+  	text-transform: uppercase;
+	}
+	@include mq($from: tablet) {
+		.sticker {
+			img{
+				max-width: 400px;
+			}
+			position: absolute;
+			top: 0;
+			&.stick {
+				position: fixed;
+			}
+		}
+	}
+	.sticker > p:first-of-type {
+		font-size: 24px;
+		max-width: 500px;
+		margin-bottom: 40px;
+	}
+	.col-3 {
+		margin-top: 80px;
+		@include mq($until: desktop){
+	    margin-top: 0;
+	    max-width: 650px;
+		}
+		@include mq($from: desktop) {
+			// flex: 1;
+			// display: flex;
+			position: relative;
+			.inner-col {
+				margin: 0 0 0 auto;
+				margin-right: 10px;
+				padding: 10px 40px 25px;
+  			position: relative;
+  			transition: all .5s;
+				max-width: 560px;
+  			h3 {
+  				color: $brand-color-3;
+  			}
+				&.ux {
+					// background: $brand-color;
+					p {
+						color: #fff;
+					}
+				}
+				&.brand {
+					p {
+						color: #fff;
+					}
+				}
+				&:last-of-type {
+					margin-right: 0;
+					p {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+.why-we-do {
+	background: rgba(255,255,255,1);
+	padding: 35px 0 65px;
+	text-align: left;
+	@include mq($from: desktop) {
+		padding: 65px 0 105px;
+	}
+	@include mq($until: tablet) {
+		padding-bottom: 35px;
+	}
+	p {
+		font-size: 24px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		@include mq($from: desktop) {
+			line-height: 2;
+		}
+		strong {
+			color: $brand-color-2;
+			font-weight: 600;
+		}
+		b {
+			color: $brand-color;
+			text-transform: uppercase;
+			font-size: 22px;
+		}
+	}
+	.wrapper {
+		max-width: 780px;
+	}
+}
+.who {
+	h2.sticker2 {
+		background: #fff;
+		line-height: 1;
+		margin: 30px 20px 0 0;
+    max-width: 482px;
+    padding: 30px 15px 30px 0;
+		transition: all .5s;
+		@include mq($from: tablet) {
+			position: absolute;
+			top: 0;
+		}
+		@include mq($until: tablet) {
+			padding-top: 0;
+			margin-top: 0;
+			padding-right: 0;
+			margin-right: 0;
+		}
+		&.stick {
+			position: fixed;
+		}
+	}
+	.col{
+		margin-bottom: 50px;
+		@include mq($from: wide) {
+			.inner-col {
+				margin: 0 0 0 auto;
+			}
+			img {
+				display: inline-block;
+				max-width: 500px;
+			}
+			.copy-container {
+				max-width: 500px;
+				display: inline-block;
+			}
+		}
+		@include mq($until: wide) {
+			margin-bottom: 0;
+		}
+		.copy-container {
+			padding-bottom: 40px;
+			@include mq($from: tablet) {
+				padding: 30px 20px 20px 45px;
+			}
+		}
+	}
+	@include mq($from: desktop) {
+		padding-bottom: 60px;
+	}
+	h2 span {
+		color: $brand-color;
+		span {
+			color: $brand-color-4;
+		}
+	}
+	.col {
+		max-width: 1132px;
+		padding-top: 288px;
+		@include mq($until: desktop) {
+			padding-top: 0;
+		}
+	}
+	.kirsten,
+	.bryony {
+		h3, p {
+			color: $brand-color-3;
+		}
+	}
+	@include mq($from: wide){
+		.kirsten,
+		.bryony {
+			h3 {
+				font-size: 45px;
+			}
+			p {
+				color: #fff;
+				font-size: 22px;
+			}
+		}
+	}
+	.bryony {
+		padding-top: 0;
+	}
+}
+

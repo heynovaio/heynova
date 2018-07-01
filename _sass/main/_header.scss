@@ -1,0 +1,244 @@
+.home nav {
+	position: fixed;
+  right: 25px;
+  bottom: 40px;
+  width: auto;
+  margin: auto;
+  padding-top: 20px;
+  @include mq($until: tablet) {
+  	position: absolute;
+  	right: auto;
+  	bottom: auto;
+  	left: 0;
+  	padding-top: 0;
+  	top: 0;
+  	z-index: 6;
+  	width: 100%;
+  	padding-right: 15px;
+  }
+	.logo {
+		margin: 0;
+		max-width: 50px;
+		padding: 0;
+		position: fixed;
+  	left: 15px;
+  	top: 15px;
+  	@include mq($until: tablet) {
+  		position: relative;
+  	}
+	}
+	// .primary-nav li:first-of-type {
+	// 	display: none;
+	// }
+	.social-nav {
+		@include mq($until: tablet) {
+			display: flex;
+		  flex-direction: row;
+    	justify-content: flex-end;
+    	margin-top: 20px;
+			a {
+				padding: 6px 10px;
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+	.primary-nav {
+		position: fixed;
+    top: 30px;
+    color: #fff;
+    right: 25px;
+    @include mq($until: tablet) {
+			position: absolute;
+			right: 0;
+			top: 0;
+			display: flex;
+			li {
+				margin-left: 15px;
+				a {
+					padding-top: 15px;
+				}
+			}
+			.generated-link {
+				order: 2;
+				margin-bottom: 0;
+			}
+    }
+    a {
+    	color: #fff;
+    	font-weight: 600;
+
+    }
+	}
+}
+.generated-link {
+	margin-bottom: 22px;
+	a {
+		background: $brand-color;
+		color: #fff;
+		padding: 16px 35px 18px;
+		&:hover {
+			background: $brand-color-4;
+			text-decoration: none;
+			padding-right: 45px;
+		}
+	}
+}
+.content {
+	.hey-nova {
+		color: $brand-color-4;
+		font-weight: 700;
+	  font-size: 32px;
+		margin-left: -103px;
+	  text-transform: uppercase;
+    padding-top: 13px;
+	  position: absolute;
+	  @include mq($until: tablet) {
+	  	display: none;
+	  }
+		span {
+			color: #fff;
+		}
+		&:hover {
+			color: $brand-color;
+			text-decoration: none;
+			span {
+				color: $brand-color;
+			}
+		}
+	}
+	.site-header {
+		background-image: linear-gradient(90deg, transparent 50%, #0d7389 50%);
+		position: fixed;
+		width: 100%;
+		top: 0;
+		@include mq($until: tablet) {
+		  background: #fff;
+		  padding-bottom: 3px;
+		}
+		.wrapper {
+			max-width: 100%;
+			padding-right: 0;
+		}
+		nav {
+			padding: 0;
+			@include mq($until: tablet) {
+				width: 75%;
+			}
+		}
+	}
+  .primary-nav {
+		order: 2;
+		position: relative;
+		right: 0;
+		a {
+			padding: 16px 5px 10px;
+			&:hover {
+				color: $brand-color-3;
+			}
+		}
+		@include mq($until: tablet) {
+			i, a {
+				color: $brand-color-4;
+			}
+			.generated-link a{
+				color: #fff;
+			}
+		}
+	}
+	.generated-link {
+		order: 2;
+		margin-bottom: 0;
+		a {
+			margin-bottom: 0;
+			margin-left: 15px;
+			padding: 16px 35px 18px;
+		}
+	}
+	.site-header .social-nav {
+		margin-right: 15px;
+		order: 1;
+		a {
+			padding: 16px 5px 10px;
+			&:hover i {
+				color: $brand-color-3;
+			}
+			@include mq($until: tablet) {
+				color: $brand-color-4;
+			}
+		}
+		span {
+			display: none;
+		}
+	}
+	nav {
+		padding-top: 10px;
+		padding-bottom: 8px;
+		.logo {
+  		margin: 0;
+  		max-width: 50px;
+  		padding: 0;
+  		position: absolute;
+    	left: 10px;
+    	top: 10px;
+  	}
+		ul{
+			display: flex;
+			float: right;
+			margin: 0 0 0 auto;
+			.page-link,
+			a {
+				color: #fff;
+			}
+			li {
+
+			}
+		}
+	}
+}
+
+nav {
+	z-index: 6;
+	text-align: right;
+	width: 50%;
+  margin: 0 0 0 auto;
+	ul {
+		margin-left:0;
+	}
+	a:visited,
+	a {
+		color: #fff;
+		display: block;
+		font-weight: 400;
+		font-size: 15px;
+		margin: 0;
+		line-height: 1;
+		padding: 4px 15px 4px 20px;
+		transition: .5s all;
+		.fa {
+			font-size: 20px;
+			margin-left: 8px;
+		}
+		&:hover {
+			padding-right: 25px;
+			color: #fff;
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	li {
+		list-style: none;
+		margin: 0;
+		text-align: right;
+	}
+}
+.primary-nav {
+	li{
+		a {
+			font-size: 22px;
+			margin-bottom: 5px;
+		}
+	}
+}

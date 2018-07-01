@@ -1,0 +1,48 @@
+.blog-list {
+	margin-left: 0;
+	display: flex;
+	padding-bottom: 85px;
+	.blog-item {
+		padding: 15px 20px 15px 0;
+		@include mq($from: desktop) {
+			width: 50%;
+		}
+		h2{
+			font-size: 50px;
+			color: $brand-color-2;
+			letter-spacing: -0.05em;
+			line-height: 1.2;
+			@include mq($until: tablet) {
+				font-size: 40px;
+			}
+			a {
+				color: $brand-color-3;
+			}
+		}
+		p {
+			color: $brand-color-3;
+		}
+		.date {
+			font-weight: 500;
+			font-size: 16px;
+			letter-spacing: 0.05em;
+			margin-bottom: 25px;
+			text-transform: uppercase;
+		}
+		.read-more {
+			display: inline-block;
+			border: 3px solid $brand-color;
+			color: $brand-color-2;
+			font-size: 18px;
+			text-transform: uppercase;
+			font-weight: 700;
+			padding: 8px 12px;
+			margin-top: 3px;
+			&:hover {
+				color: #fff;
+				background: $brand-color;
+				text-decoration: none;
+			}
+		}
+	}
+}

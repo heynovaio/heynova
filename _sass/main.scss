@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: "Cooper Hewitt", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$base-font-size:   18px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:         #111 !default;
+$background-color:   #fdfdfd !default;
+$brand-color:        #d5330d !default; //red
+$brand-color-3:      #0a2239 !default; //navy
+$brand-color-2:      #0c7489 !default; //turquoise dark
+$brand-color-4:      #0fa3b1 !default; //turquoise light
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width:    1200px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import
+  "main/mq",
+  "main/fonts",
+  "main/base",
+  "main/layout",
+  "main/syntax-highlighting",
+  "main/page",
+  "main/home",
+  "main/blog",
+  "main/header",
+  "main/post",
+  "main/animations",
+  "main/star",
+  "main/footer"
+;
